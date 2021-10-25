@@ -1,3 +1,5 @@
+# This is the code for creating the dataset
+# If you don't want to try your own samples, you can download Data.csv in this repo.
 import cv2
 import mediapipe as mp
 from csv import writer
