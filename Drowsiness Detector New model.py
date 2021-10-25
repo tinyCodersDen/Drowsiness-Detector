@@ -1,3 +1,5 @@
+# This is the code for creating a tensorflow model
+# This is currently in-progress, however it gives you around 66% accuracy
 import tensorflow as tf
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -5,14 +7,6 @@ df = pd.read_csv("New_Drowsy.csv")
 l = df.loc[:,df.columns!='Status']
 y= df['Status'].tolist()
 model = tf.keras.models.Sequential([
-  # tf.keras.layers.SeparableConv1D( 128 , input_shape=(None,None,102) , kernel_size=( 5 ) , strides=1 ),
-  # tf.keras.layers.BatchNormalization(),
-  # tf.keras.layers.Activation( 'relu' ) ,
-  # tf.keras.layers.SeparableConv2D( 128 , kernel_size=( 5 , 5 ) , strides=1 ),
-  # tf.keras.layers.BatchNormalization(),
-  # tf.keras.layers.Activation( 'relu' ) ,
-  # tf.keras.layers.Cropping1D(cropping=1),
-  # tf.keras.layers.Conv1D(32, 3, activation='relu',input_shape=(102,102,)),
   tf.keras.layers.Dense(51, activation='relu', input_dim=(102), kernel_initializer='normal'),
   tf.keras.layers.Dropout(0.3),
   tf.keras.layers.Dense(17, activation='relu', kernel_initializer='normal'),
