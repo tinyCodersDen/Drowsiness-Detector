@@ -1,4 +1,4 @@
-# This is the final product for the project.
+# This is the final product for the project(using the sklearn model):
 import cv2
 import mediapipe as mp
 import pickle
