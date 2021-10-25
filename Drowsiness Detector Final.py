@@ -1,3 +1,4 @@
+# This is the final product for the project.
 import cv2
 import mediapipe as mp
 import pickle
